@@ -1,4 +1,3 @@
-/*
 pipeline {
     //small change
 
@@ -18,8 +17,7 @@ pipeline {
 
             post{
                 always {
-                    junit '**//*
-target/surefire-reports/TEST-*.xml'
+                    junit '**/target/surefire-reports/TEST-*.xml'
                 }
             }
         }
@@ -29,11 +27,9 @@ target/surefire-reports/TEST-*.xml'
             }
             post{
                 success{
-                    archiveArtifacts 'target */
-/*.jar'
+                    archiveArtifacts 'target/*.jar'
                 }
             }
         }
     }
 }
- */
